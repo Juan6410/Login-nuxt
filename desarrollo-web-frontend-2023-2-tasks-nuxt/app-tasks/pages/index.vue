@@ -1,21 +1,26 @@
 <template>
-  <div>
-    <center>
-      <h1>Bienvenidos a la app de tareas</h1>
-      <p>Esta es una aplicación que permite gestionar las tareas de los estudiantes</p>
-
-      <a href="/tareas">Click para iniciar (sin nuxtLink)</a>
-<br>
-<br>
-      <NuxtLink to="/tareas">
-        Click para iniciar (Con nuxtLink)
-      </NuxtLink>
-    </center>
-
+  <div style="text-align: center;">
+    <h1 style="margin-top: 20px;">Ingrese sus datos para continuar</h1>
+  </div>
+  <div style="margin-top: 20px;">
+    <Formulario />
   </div>
 </template>
+
 <script>
+import Formulario from "~/components/tasks/Formulario.vue";
+
+export default {
+  components: {
+    Formulario
+  },
+  head: {
+    title: 'Formulario de Ejemplo' // Puedes personalizar el título de la página aquí
+  }
+};
+
 definePageMeta({
   layout: "blank",
 });
+
 </script>
